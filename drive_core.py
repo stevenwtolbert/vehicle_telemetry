@@ -24,6 +24,7 @@ while True:
 
 		query = f"""INSERT INTO g_forces (xG, yG, zG) VALUES ({xG},{yG},{zG})""" 
 		cur.execute(query)
+
 		time.sleep(1)
 	except:
 		conn.commit()
