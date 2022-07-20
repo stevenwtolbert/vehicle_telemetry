@@ -13,7 +13,6 @@ def get_snapshot(connection):
 	fuel_level = connection.query(obd.commands.FUEL_LEVEL)
 
 	values = (speed,
-<<<<<<< HEAD
 	            rpm,
 	            absolute_load,
 	            engine_load,
@@ -26,18 +25,4 @@ def get_snapshot(connection):
 	            accelerator_pos_f,
 	            fuel_level)
 	return values
-=======
-	            rpm,
-	            absolute_load,
-	            engine_load,
-	            absolute_throttle_position,
-	            relative_throttle_position,
-	            throttle_pos_b,
-	            throttle_pos_c,
-	            accelerator_pos_d,
-	            accelerator_pos_e,
-	            accelerator_pos_f,
-	            fuel_level)
-	
-	return values			
->>>>>>> 267e5bc472f206b1e82290a0fef08609e38e735d
+
