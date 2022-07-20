@@ -1,0 +1,40 @@
+def insert_telemetry_data(read_time, accelerometer_values, gyroscope_values, gps_values, obd_values):
+	query = """INSERT INTO measurements(
+			read_time,
+			xG,
+			yG,
+			zG,
+			speed,
+			rpm,
+			absolute_load,
+			absolute_throttle_position,
+			throttle_pos_b,
+			throttle_pos_c,
+			accelerator_pos_d,
+			accelerator_pos_e,
+			accelerator_pos_f,
+			fuel_level,
+			latitude,
+			longitude)
+			VALUES(
+			{read_time},
+			{accelerometer_values[0]},
+			{accelerometer_values[1]},
+			{accelerometer_values[2]},
+			{gyroscope_values[0]},
+			{gyroscope_values[1]},
+			{gyroscope_values[2]},
+			{gps_values[0]},
+			{gps_valies[1]},
+			{obd_values[0]},
+			{obd_values[1]},
+			{obd_values[2]},
+			{obd_values[3]},
+			{obd_values[4]},
+			{obd_values[5]},
+			{obd_values[6]},
+			{obd_values[7]},
+			{obd_values[8]},
+			{obd_values[9]})
+			"""
+	return query

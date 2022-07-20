@@ -12,7 +12,9 @@ def connect_mariadb():
 			)
 	except mariadb.Error as e:
 		print(f"Error Connecting to MariaDB Platform: {e} ")
-		sys.exist(1)
-	return conn
+		return None
+	cur = conn.cursor()
+
+	return(conn, cur)
 
 
